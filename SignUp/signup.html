@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">												
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Shot Reminder App</title>
+	<link rel="stylesheet" href="signup.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+</head>
+<body>
+	<form id="regForm">
+	  <h1>Register:</h1>
+
+	  <!-- One "tab" for each step in the form: -->
+	  <div class="tab">What would you like us to call you?
+		<p><input placeholder="Name..." oninput="this.className = ''" name="fname"></p>
+	  </div>
+
+	  <div class="tab">We promise not to spam you!
+		<p><input placeholder="E-mail..." oninput="this.className = ''" name="email"></p>
+	  </div>
+
+	  <div class="tab">When last did you take your shot?
+		<p><input placeholder="dd" oninput="this.className = ''" name="dd"></p>
+		<p><input placeholder="mm" oninput="this.className = ''" name="nn"></p>
+		<p><input placeholder="yyyy" oninput="this.className = ''" name="yyyy"></p>
+	  </div>
+
+	  <div class="tab">After how many days do you take your shot?
+		<p><input placeholder="Enter number..." oninput="this.className = ''" name="uname"></p>
+	  </div>
+
+	  <div class="tab">Login details
+		<p><input placeholder="Username..."oninput="this.className = ''" name="uname"></p>
+		<p><input placeholder="Password..." oninput="this.className = ''" name="pword" type="password"></p>
+	  </div>
+
+	  <div style="overflow:auto;">
+		<div style="float:right;">
+		  <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+		  <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+		</div>
+	  </div>
+
+	  <!-- Circles which indicates the steps of the form: -->
+
+	  <div style="text-align:center;margin-top:40px;">
+		<span class="step"></span>
+		<span class="step"></span>
+		<span class="step"></span>
+		<span class="step"></span>
+		<span class="step"></span>
+	  </div>
+	</form>
+	<script src="signup.js"></script>
+</body>
+</html>
